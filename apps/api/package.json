@@ -10,10 +10,15 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "@prisma/client": "^6.16.2",
     "@your-app/shared": "workspace:*",
     "cors": "^2.8.5",
+    "dlx": "^0.2.1",
     "dotenv": "^16.4.0",
     "express": "^4.21.2",
+    "generate": "^0.14.0",
+    "pnpm": "^10.17.1",
+    "prisma": "^6.16.2",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
