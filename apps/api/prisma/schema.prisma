@@ -7,11 +7,29 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Room {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  messages  Message[]
+}
+
 model Message {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   text      String
   author    String
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
+
+  // ⚠️ optional for now so current API keeps working;
+  // we'll start using it in the next steps.
+  roomId    String?
+  room      Room?     @relation(fields: [roomId], references: [id])
 
   @@map("messages")
+}
+model User {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
 }

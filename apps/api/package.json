@@ -12,11 +12,13 @@
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "@your-app/shared": "workspace:*",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dlx": "^0.2.1",
     "dotenv": "^16.4.0",
     "express": "^4.21.2",
     "generate": "^0.14.0",
+    "jsonwebtoken": "^9.0.2",
     "pnpm": "^10.17.1",
     "prisma": "^6.16.2",
     "socket.io": "^4.8.1"
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.10",
     "rimraf": "^6.0.0",
     "tsx": "^4.20.0",
     "typescript": "^5.5.0"

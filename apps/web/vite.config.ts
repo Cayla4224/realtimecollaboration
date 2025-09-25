@@ -8,8 +8,10 @@ export default defineConfig({
     port: 5173,
     host: true,
     proxy: {
-      "/messages": { target: "http://localhost:4000", changeOrigin: true },
-      "/health":   { target: "http://localhost:4000", changeOrigin: true }, // <-- comma here
+      "/health":    { target: "http://localhost:4000", changeOrigin: true },
+      "/messages":  { target: "http://localhost:4000", changeOrigin: true },
+      "/rooms":     { target: "http://localhost:4000", changeOrigin: true },
+      "/auth":      { target: "http://localhost:4000", changeOrigin: true }, // 👈 add this
       "/socket.io": { target: "http://localhost:4000", changeOrigin: true, ws: true }
     }
   }
